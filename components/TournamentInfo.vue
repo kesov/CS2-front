@@ -66,7 +66,7 @@
           </div>
         </div>
 
-        <!-- Система турнира с картинкой Swiss -->
+        <!-- Система турнира с картинкой -->
         <div class="mb-16 relative">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>

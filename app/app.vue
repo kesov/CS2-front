@@ -277,7 +277,7 @@
               <div class="flex items-center gap-6">
                 <span class="text-gray-500 text-sm flex items-center gap-2">
                   <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  <span>8 команд • Swiss System</span>
+                  <span>8 команд • DOUBLE ELIMINATION</span>
                 </span>
                 <div class="flex items-center gap-3">
                   <span class="text-gray-500 text-sm">Партнеры:</span>
