@@ -1,75 +1,114 @@
-# Nuxt Minimal Starter
+# CS2 Tournament Frontend
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Фронтенд для турнира по Counter-Strike 2. Построен на Nuxt 4.
 
-## Setup
+## О проекте
 
-Make sure to install dependencies:
+Веб-интерфейс для LAN-турнира по CS2 с современным дизайном в стиле игры. Позволяет командам регистрироваться, а администраторам просматривать и управлять заявками.
+
+## Технологии
+
+- Nuxt 4
+- Vue 3
+- TailwindCSS
+- Vite
+
+## Функционал
+
+- Регистрация команд (капитан + 5 игроков)
+- Просмотр информации о турнире
+- Админ-панель с защитой паролем
+- Публичные и приватные данные команд
+
+## Установка и запуск
 
 ```bash
-# npm
+# Клонировать репозиторий
+git clone https://github.com/ВАШ_АККАУНТ/CS2_frontend.git
+cd CS2_frontend
+
+# Установить зависимости
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+# Запустить в режиме разработки
+npm run dev
 ```
 
-## Development Server
+## Страницы
 
-Start the development server on `http://localhost:3000`:
+| URL | Описание |
+|-----|----------|
+| `/` | Главная страница с информацией о турнире |
+| `/admin` | Админ-панель (требуется пароль) |
+
+## Админ-панель
+
+Доступна по адресу `/admin`. Пароль: `123456`
+
+### Информация о команде:
+- Названия команд
+- Имя капитана
+- Ники игроков
+- Статусы команд
+- Кто капитан/контактное лицо
+- Телефоны
+- Email
+- Ссылки на Steam
+
+## Конфигурация
+
+В файле `nuxt.config.ts` укажите правильный URL бэкенда:
+
+```javascript
+runtimeConfig: {
+  public: {
+    apiBase: 'http://localhost:8000' // URL вашего Laravel сервера
+  }
+}
+```
+
+## Структура проекта
+
+```
+CS2_frontend/
+├── components/
+│   ├── AdminPanel.vue        # Админ-панель
+│   ├── RegistrationForm.vue  # Форма регистрации
+│   └── TournamentInfo.vue    # Информация о турнире
+├── pages/
+│   ├── index.vue             # Главная страница
+│   └── admin.vue             # Страница админки
+├── public/                   # Статические файлы
+├── app.vue                    # Корневой компонент
+├── nuxt.config.ts             # Конфигурация Nuxt
+├── package.json
+└── tailwind.config.js         # Конфигурация Tailwind
+```
+
+## Скрипты
 
 ```bash
-# npm
+# Запуск в режиме разработки
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# Сборка проекта
 npm run build
 
-# pnpm
-pnpm build
+# Генерация статических файлов
+npm run generate
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
+# Предпросмотр собранного проекта
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Дизайн
+
+- Кинематографичный фон с эффектами
+- Анимированные элементы (float, zoom, pulse)
+- Градиенты в стиле CS2
+- Кастомный скроллбар
+- Эффекты свечения и размытия
+
+## Лицензия
+
+Проект является открытым программным обеспечением, лицензированным по [MIT лицензии](https://opensource.org/licenses/MIT).
