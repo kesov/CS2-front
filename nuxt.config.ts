@@ -6,7 +6,9 @@ export default defineNuxtConfig({
       apiBase: 'http://localhost:8000'
     }
   },
-  
+
+  srcDir: './',
+
   app: {
     head: {
       title: 'CS2 Championship - Кисловодск',
@@ -19,9 +21,11 @@ export default defineNuxtConfig({
   },
   
   // Отключаем SSR полностью
-  ssr: false,
+  ssr: true,
   
   devtools: { enabled: false },
+
+  pages: true,
   
   compatibilityDate: '2026-02-13'
 })
